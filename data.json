@@ -1,0 +1,107 @@
+[
+    {
+        "year": "2018",
+        "positions": [
+            {
+                "name": "会长",
+                "staffs": [
+                    {
+                        "name": "John Doe",
+                        "saying": "I'm the CEO",
+                        "avatar": "john_doe.jpg",
+                        "photo": "john_doe.jpg"
+                    },
+                    {
+                        "name": "Peter Parker",
+                        "saying": "I'm the CTO",
+                        "avatar": "peter_parker.jpg",
+                        "photo": "peter_parker.jpg"
+                    },
+                    {
+                        "name": "Mary Jane",
+                        "saying": "I'm the CFO",
+                        "avatar": "mary_jane.jpg",
+                        "photo": "mary_jane.jpg"
+                    }
+                ]
+            },
+            {
+                "name": "研发部",
+                "staffs": [
+                    {
+                        "name": "John Doe",
+                        "saying": "I'm the CEO",
+                        "avatar": "john_doe.jpg",
+                        "photo": "john_doe.jpg"
+                    },
+                    {
+                        "name": "Peter Parker",
+                        "saying": "I'm the CTO",
+                        "avatar": "peter_parker.jpg",
+                        "photo": "peter_parker.jpg"
+                    }
+                ]
+            },
+            {
+                "name": "维修部",
+                "staffs": [
+                    {
+                        "name": "Mary Jane",
+                        "saying": "I'm the CFO",
+                        "avatar": "mary_jane.jpg",
+                        "photo": "mary_jane.jpg"
+                    }
+                ]
+            },
+            {
+                "name": "设计部",
+                "staffs": [
+                    {
+                        "name": "Mary Jane",
+                        "saying": "I'm the CFO",
+                        "avatar": "mary_jane.jpg",
+                        "photo": "mary_jane.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "year": "2018",
+        "positions": [
+            {
+                "name": "CEO",
+                "staffs": [
+                    {
+                        "name": "John Doe",
+                        "saying": "I'm the CEO",
+                        "avatar": "john_doe.jpg",
+                        "photo": "john_doe.jpg"
+                    }
+                ]
+            },
+            {
+                "name": "CTO",
+                "staffs": [
+                    {
+                        "name": "Peter Parker",
+                        "saying": "I'm the CTO",
+                        "avatar": "peter_parker.jpg",
+                        "photo": "peter_parker.jpg"
+                    }
+                ]
+            },
+            {
+                "name": "CFO",
+                "staffs": [
+                    {
+                        "name": "Mary Jane",
+                        "saying": "I'm the CFO",
+                        "avatar": "mary_jane.jpg",
+                        "photo": "mary_jane.jpg"
+                    }
+                ]
+            }
+        ]
+    }
+]
