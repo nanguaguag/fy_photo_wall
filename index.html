@@ -9,53 +9,15 @@
 
     <link rel="icon" href="./assets/favicon.ico">
 
-    <link rel="mask-icon" href="https://theme-next.js.org/images/logo.svg" color="#222">
-    <link rel="stylesheet" href="https://theme-next.js.org/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/style.css">
 
     <script class="next-config" data-name="main" type="application/json">
     {
-        "hostname": "theme-next.js.org",
         "root": "/",
-        "images": "/images",
         "scheme": "Gemini",
-        "darkmode": true,
-        "version": "8.20.0",
-        "exturl": true,
-        "sidebar": {
-            "position": "left",
-            "width_expanded": 320,
-            "width_dual_column": 240,
-            "display": "post",
-            "padding": 18,
-            "offset": 12
-        },
-        "copycode": {
-            "enable": true,
-            "style": "default"
-        },
-        "fold": {
-            "enable": false,
-            "height": 500
-        },
-        "bookmark": {
-            "enable": false,
-            "color": "#222",
-            "save": "auto"
-        },
-        "mediumzoom": true,
-        "lazyload": false,
-        "pangu": false,
-        "comments": {
-            "style": "tabs",
-            "active": null,
-            "storage": true,
-            "lazyload": true,
-            "nav": null
-        },
-        "stickytabs": false,
         "motion": {
             "enable": true,
             "async": true,
@@ -67,21 +29,12 @@
                 "coll_header": "fadeInLeft",
                 "sidebar": "fadeInUp"
             }
-        },
-        "path": "/search.json",
-        "localsearch": {
-            "enable": true,
-            "trigger": "auto",
-            "top_n_per_article": 1,
-            "unescape": false,
-            "preload": false
         }
     }
-
     </script>
 
-    <meta name="description" content="NexT - An elegant and powerful theme for Hexo.">
-    <title>Archive | NexT</title>
+    <meta name="description" content="飞扬俱乐部——创新实践，服务川大">
+    <title>飞扬俱乐部 | 我们</title>
 </head>
 
 <body itemscope class="use-motion">
@@ -188,20 +141,40 @@
         </div>
     </main>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-next/8.20.0/config.min.js"
-        defer></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-        defer></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js"
-        defer></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-next/8.20.0/utils.min.js"
-        defer></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-next/8.20.0/motion.min.js"
-        defer></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-next/8.20.0/next-boot.min.js"
-        defer></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js">
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="copyright">
+                &copy; 2003 -
+                <span itemprop="copyrightYear">2024</span>
+                <span class="with-love">
+                    <i class="fa fa-heart"></i>
+                </span>
+                <span class="author" itemprop="copyrightHolder">飞扬俱乐部</span>
+            </div>
+            <div class="footer-custom">
+                由于年代久远很多资料遗失，如需添加或更改请联系
+                <i class="fa-brands fa-qq"></i>
+                2773501874
+            </div>
+            <div class="footer-custom">
+                欢迎加入飞扬俱乐部！
+                <a class="exturl theme-link" href="http://beian.miit.gov.cn/">
+                    <i class="fas fa-link"></i>
+                    蜀ICP备20010266号-1
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="./js/config.min.js"></script>
+    <script type="text/javascript" src="./js/anime.min.js"></script>
+    <script type="text/javascript" src="./js/medium-zoom.min.js"></script>
+    <script type="text/javascript" src="./js/utils.min.js"></script>
+    <script type="text/javascript" src="./js/motion.min.js"></script>
+    <script type="text/javascript" src="./js/next-boot.min.js"></script>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js">
     </script>
 
     <script>
@@ -279,8 +252,8 @@
                                     .append(avatarImg)
                                     .append(overlay)
                                     .click(function () {
-                                        let windowWidth = $(window).width();
-                                        let windowHeight = $(window).height();
+                                        var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                                        var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
                                         let popup = $('.popup');
                                         let popupbg = $('.popup-bg');
                                         let popupInfo = $('.popup-info');
@@ -351,9 +324,6 @@
 
         $(document).ready(function () {
             buildDOM();
-            NexT.boot.registerEvents();
-            NexT.boot.refresh();
-            NexT.boot.motion();
         });
     </script>
 </body>
