@@ -105,7 +105,7 @@
     <!-- 个人页 popup -->
     <div class="popup-bg"></div>
     <div class="popup">
-        <img class="popup-image" src="">
+        <div class="popup-image"></div>
         <div class="popup-info"></div>
     </div>
 
@@ -128,7 +128,7 @@
                             <i class="logo-line"></i>
                         </a>
                         <p class="site-subtitle" itemprop="description">
-                            —— 我们的团队
+                            创新实践，服务川大
                         </p>
                     </div>
 
@@ -279,7 +279,13 @@
                                     .append(avatarImg)
                                     .append(overlay)
                                     .click(function () {
-                                        $('.popup-info').empty()
+                                        let windowWidth = $(window).width();
+                                        let windowHeight = $(window).height();
+                                        let popup = $('.popup');
+                                        let popupbg = $('.popup-bg');
+                                        let popupInfo = $('.popup-info');
+                                        let popupImage = $('.popup-image');
+                                        popupInfo.empty()
                                             .append($('<h1>')
                                                 .addClass('staff-name animated fadeInDown')
                                                 .text(name)
@@ -290,10 +296,27 @@
                                                 .addClass('staff-position animated fadeInDown')
                                                 .text("职位：" + positionName)
                                             );
-                                        $('.popup-image').attr('src', `./assets/${year}/${photo}`);
-                                        alignCenter($('.popup'));
-                                        $('.popup-bg').fadeIn().addClass('animated fadeIn');
-                                        $('.popup').fadeIn().addClass('animated fadeInLeft');
+                                        popupImage.empty()
+                                            .append($('<img>')
+                                                .attr('src', `./assets/${year}/${photo}`)
+                                            );
+                                        console.log(windowWidth, windowHeight);
+                                        if (windowWidth > windowHeight) {
+                                            popupImage.css({
+                                                'float': 'left',
+                                                'max-width': '60%',
+                                                'max-height': '100%'
+                                            });
+                                        } else {
+                                            popupImage.css({
+                                                'float': 'top',
+                                                'max-height': '60%',
+                                                'max-width': '100%'
+                                            });
+                                        }
+                                        alignCenter(popup);
+                                        popupbg.fadeIn().addClass('animated fadeIn');
+                                        popup.fadeIn().addClass('animated fadeInLeft');
                                     });
                                 avatarsContainerDiv.append(avatarDiv);
                             });
