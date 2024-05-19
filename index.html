@@ -40,8 +40,8 @@
 <body itemscope class="use-motion">
     <noscript>
         <strong>
-            We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
-                Please enable it to continue.
+            We're sorry but this page doesn't work properly without JavaScript enabled.
+            Please enable it to continue.
         </strong>
     </noscript>
     <div id="app"></div>
@@ -167,24 +167,31 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="./js/config.min.js"></script>
-    <script type="text/javascript" src="./js/anime.min.js"></script>
-    <script type="text/javascript" src="./js/medium-zoom.min.js"></script>
-    <script type="text/javascript" src="./js/utils.min.js"></script>
-    <script type="text/javascript" src="./js/motion.min.js"></script>
-    <script type="text/javascript" src="./js/next-boot.min.js"></script>
+    <script type="text/javascript" src="./js/config.min.js" defer></script>
+    <script type="text/javascript" src="./js/anime.min.js" defer></script>
+    <script type="text/javascript" src="./js/medium-zoom.min.js" defer></script>
+    <script type="text/javascript" src="./js/utils.min.js" defer></script>
+    <script type="text/javascript" src="./js/motion.min.js" defer></script>
+    <script type="text/javascript" src="./js/next-boot.min.js" defer></script>
+    <script type="text/javascript" src="./js/jquery.lazy.min.js" defer></script>
 
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js">
-    </script>
 
     <script>
         function alignPopup() {
             let popup = $('.popup');
-            popup.css({
-                'margin-top': ($(window).height() - popup.height()) / 2 + 'px',
-                'margin-left': ($(window).width() - popup.width()) / 2 + 'px'
-            });
+            // 每隔一段时间检查.popup-image的宽度是否不为0
+            var checkWidthInterval = setInterval(function () {
+                let width = $('.popup-image').width();
+                let height = $('.popup-image').height();
+                if (width !== 0 && height !== 0) {
+                    clearInterval(checkWidthInterval); // 停止定时器
+                    popup.css({
+                        'margin-top': ($(window).height() - popup.height()) / 2 + 'px',
+                        'margin-left': ($(window).width() - popup.width()) / 2 + 'px'
+                    });
+                }
+            }, 10); // 每隔0.01秒检查一次
         }
 
         function windowCenter() {
@@ -259,7 +266,7 @@
                     finished();
                 },
                 success: function (data) {
-                    console.log("data:", data);  // 输出结果
+                    // console.log("data:", data);  // 输出结果
                     let appContainer = $('#app_container');
                     // $.each(data, function (index, yearData) {
                     data.forEach(yearData => {
