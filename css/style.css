@@ -58,6 +58,7 @@
 
 
 /* popup */
+
 .popup-bg {
     display: none;
     position: fixed;
@@ -89,6 +90,7 @@
 }
 
 .popup-image img {
+    margin: 0;
     object-fit: cover;
     overflow: hidden;
 }
@@ -97,7 +99,11 @@
     padding-left: 2rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
-    overflow: hidden;
+    overflow: auto;
+}
+
+.popup-clear {
+    clear: both;
 }
 
 /* font awesome */

@@ -60,6 +60,7 @@
     <div class="popup">
         <div class="popup-image"></div>
         <div class="popup-info"></div>
+        <div class="popup-clear"></div>
     </div>
 
     <main class="main">
@@ -194,18 +195,22 @@
             let popupImage = $('.popup-image');
             // console.log(windowWidth, windowHeight);
             if (windowWidth > windowHeight) {
-                popupInfo.css({ 'float': 'left', });
-                popupImage.css({
+                popupInfo.css({
                     'float': 'left',
-                    'max-width': '60%',
-                    'max-height': '100%'
+                });
+                popupImage.css({
+                    'float': 'right',
+                    'width': '60%',
+                    'height': '100%'
                 });
             } else {
-                popupInfo.css({ 'float': 'top', });
+                popupInfo.css({
+                    'float': 'none',
+                });
                 popupImage.css({
-                    'float': 'top',
-                    'max-height': '60%',
-                    'max-width': '100%'
+                    'float': 'none',
+                    'height': '60%',
+                    'width': '100%'
                 });
             }
         }
@@ -292,7 +297,7 @@
                                 let photo = staff.photo;
                                 let avatarImg = $('<img>')
                                     .addClass('thumbnail lazy')
-                                    .attr('data-src', `./assets/${year}/${staff.avatar}`);
+                                    .attr('data-src', avatar);
                                 let overlay = $('<div>').addClass('overlay').text(name);
                                 let avatarDiv = $('<div>')
                                     .addClass('avatar')
@@ -309,17 +314,17 @@
                                                 .text(name)
                                             ).append($('<p>')
                                                 .addClass('staff-saying animated fadeInDown')
-                                                .text(saying)
+                                                .html(saying)
                                             ).append($('<p>')
                                                 .addClass('staff-position animated fadeInDown')
                                                 .text("职位：" + positionName)
                                             );
                                         popupImage.empty()
                                             .append($('<img>')
-                                                .attr('src', `./assets/${year}/${photo}`)
+                                                .attr('src', photo)
                                             );
                                         // popup 居中
-                                        windowCenter()
+                                        windowCenter();
                                         popupbg.fadeIn().addClass('animated fadeIn');
                                         popup.fadeIn().addClass('animated fadeInLeft');
                                     });
