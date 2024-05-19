@@ -73,8 +73,6 @@
 .popup {
     position: fixed;
     display: none;
-    margin-right: auto;
-    margin-left: auto;
     max-width: 80%;
     max-height: 80%;
     background: #fff;
