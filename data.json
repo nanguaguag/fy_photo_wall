@@ -10,6 +10,12 @@
                         "saying": "control-C/V走天下",
                         "avatar": "hzy-avatar.jpg",
                         "photo": "hzy-photo.jpg"
+                    },
+                    {
+                        "name": "ngg",
+                        "saying": "我是ngg",
+                        "avatar": "pxy-photo.png",
+                        "photo": "pxy-photo.png"
                     }
                 ]
             }

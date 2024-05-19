@@ -275,19 +275,29 @@
                                             );
                                         console.log(windowWidth, windowHeight);
                                         if (windowWidth > windowHeight) {
+                                            popupInfo.css({
+                                                'float': 'left',
+                                            });
                                             popupImage.css({
                                                 'float': 'left',
                                                 'max-width': '60%',
                                                 'max-height': '100%'
                                             });
                                         } else {
+                                            popupInfo.css({
+                                                'float': 'top',
+                                            });
                                             popupImage.css({
                                                 'float': 'top',
                                                 'max-height': '60%',
                                                 'max-width': '100%'
                                             });
                                         }
-                                        alignCenter(popup);
+                                        // popup 居中
+                                        popup.css({
+                                            'margin-top': (windowHeight - popup.height()) / 2 + 'px',
+                                            'margin-left': (windowWidth - popup.width()) / 2 + 'px'
+                                        });
                                         popupbg.fadeIn().addClass('animated fadeIn');
                                         popup.fadeIn().addClass('animated fadeInLeft');
                                     });
