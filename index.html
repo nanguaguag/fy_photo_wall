@@ -178,18 +178,36 @@
     </script>
 
     <script>
-        function alignCenter(element) {
-            const elementWidth = element.width();
-            const elementHeight = element.height();
-
-            element.css({
-                'position': 'fixed',
-                'display': 'none',
-                'top': '50%',
-                'left': '50%',
-                'margin-top': -elementHeight / 2 + 'px',
-                'margin-left': -elementWidth / 2 + 'px'
+        function alignPopup() {
+            let popup = $('.popup');
+            popup.css({
+                'margin-top': ($(window).height() - popup.height()) / 2 + 'px',
+                'margin-left': ($(window).width() - popup.width()) / 2 + 'px'
             });
+        }
+
+        function windowCenter() {
+            alignPopup();
+            let windowWidth = $(window).width();
+            let windowHeight = $(window).height();
+            let popupInfo = $('.popup-info');
+            let popupImage = $('.popup-image');
+            // console.log(windowWidth, windowHeight);
+            if (windowWidth > windowHeight) {
+                popupInfo.css({ 'float': 'left', });
+                popupImage.css({
+                    'float': 'left',
+                    'max-width': '60%',
+                    'max-height': '100%'
+                });
+            } else {
+                popupInfo.css({ 'float': 'top', });
+                popupImage.css({
+                    'float': 'top',
+                    'max-height': '60%',
+                    'max-width': '100%'
+                });
+            }
         }
 
         function countStaff(yearData) {
@@ -206,6 +224,12 @@
                 effect: "fadeIn",
                 effectTime: 1000,
                 threshold: 0
+            });
+            $(window).resize(function () {
+                windowCenter();
+            });
+            $('.popup').on('resize', function () {
+                alignPopup();
             });
             $('.popup-bg').click(function () {
                 $('.popup-bg').fadeOut().removeClass('animated fadeIn');
@@ -275,8 +299,6 @@
                                     .append(avatarImg)
                                     .append(overlay)
                                     .click(function () {
-                                        var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                                        var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
                                         let popup = $('.popup');
                                         let popupbg = $('.popup-bg');
                                         let popupInfo = $('.popup-info');
@@ -296,31 +318,8 @@
                                             .append($('<img>')
                                                 .attr('src', `./assets/${year}/${photo}`)
                                             );
-                                        console.log(windowWidth, windowHeight);
-                                        if (windowWidth > windowHeight) {
-                                            popupInfo.css({
-                                                'float': 'left',
-                                            });
-                                            popupImage.css({
-                                                'float': 'left',
-                                                'max-width': '60%',
-                                                'max-height': '100%'
-                                            });
-                                        } else {
-                                            popupInfo.css({
-                                                'float': 'top',
-                                            });
-                                            popupImage.css({
-                                                'float': 'top',
-                                                'max-height': '60%',
-                                                'max-width': '100%'
-                                            });
-                                        }
                                         // popup 居中
-                                        popup.css({
-                                            'margin-top': (windowHeight - popup.height()) / 2 + 'px',
-                                            'margin-left': (windowWidth - popup.width()) / 2 + 'px'
-                                        });
+                                        windowCenter()
                                         popupbg.fadeIn().addClass('animated fadeIn');
                                         popup.fadeIn().addClass('animated fadeInLeft');
                                     });

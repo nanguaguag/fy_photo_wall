@@ -154,7 +154,6 @@
 }
 
 @-webkit-keyframes sk-bounce {
-
     0%,
     100% {
         -webkit-transform: scale(0.0)
