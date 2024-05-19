@@ -200,12 +200,35 @@
             return res;
         }
 
+        function finished() {
+            // 图片懒加载
+            $("img.lazy").Lazy({
+                effect: "fadeIn",
+                effectTime: 1000,
+                threshold: 0
+            });
+            $('.popup-bg').click(function () {
+                $('.popup-bg').fadeOut().removeClass('animated fadeIn');
+                $('.popup').fadeOut().removeClass('animated fadeInLeft');
+            });
+            // 隐藏加载动画
+            $('.spinner-container').addClass('hidden');
+            // 刷新 NexT 元素
+            NexT.boot.registerEvents();
+            NexT.boot.refresh();
+            NexT.boot.motion();
+        }
+
         function buildDOM(params) {
             let appContainer = ("#app_container");
             $.ajax({
                 method: "GET",      // 设置请求方式为GET
                 url: "./data.json", // 加载本地json文件
                 dataType: "json",   // 设置数据类型为json
+                error: function (error) {
+                    console.log("error:", error);  // 输出错误
+                    finished();
+                },
                 success: function (data) {
                     console.log("data:", data);  // 输出结果
                     let appContainer = $('#app_container');
@@ -313,21 +336,7 @@
                             appContainer.append(article);
                         });
                     });
-                    $("img.lazy").Lazy({
-                        effect: "fadeIn",
-                        effectTime: 1000,
-                        threshold: 0
-                    });
-                    $('.popup-bg').click(function () {
-                        $('.popup-bg').fadeOut().removeClass('animated fadeIn');
-                        $('.popup').fadeOut().removeClass('animated fadeInLeft');
-                    });
-                    // 隐藏加载动画
-                    $('.spinner-container').addClass('hidden');
-                    // 刷新 NexT 元素
-                    NexT.boot.registerEvents();
-                    NexT.boot.refresh();
-                    NexT.boot.motion();
+                    finished();
                 }
             });
         }
