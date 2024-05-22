@@ -7,19 +7,29 @@
                 "staffs": [
                     {
                         "name": "胡宗尧",
-                        "saying": "Control+C\\V走天下<br>「<code>Python·C++</code>」",
+                        "saying": "Control+C\\V走天下",
+                        "language": "Python·C++",
                         "avatar": "https://lab.fyscu.com/images/huzongyao.jpg",
-                        "photo": "https://lab.fyscu.com/images/huzongyao.jpg"
+                        "photo": "https://lab.fyscu.com/images/huzongyao.jpg",
+                        "position": "研发部 副部长",
+                        "contact": {
+                            "fa-brands fa-zhihu": "https://www.zhihu.com/people/nan-gua-gua-6",
+                            "fa-brands fa-weibo": "https://weibo.com/u/7644230524",
+                            "fa-brands fa-bilibili": "https://space.bilibili.com/516375504",
+                            "fa-solid fa-envelope": "mailto:2694536263@qq.com"
+                        }
                     },
                     {
                         "name": "王倩茹",
-                        "saying": "从“Hello World”开始改变世界<br>「<code>C·Java</code>」",
+                        "saying": "从“Hello World”开始改变世界",
+                        "language": "C·Java",
                         "avatar": "https://lab.fyscu.com/images/wangqianru.jpg",
                         "photo": "https://lab.fyscu.com/images/wangqianru.jpg"
                     },
                     {
                         "name": "彭湘怡",
-                        "saying": "不妨行舟且弄潮<br>「<code>C·Java</code>」",
+                        "saying": "不妨行舟且弄潮",
+                        "language": "C·Java",
                         "avatar": "https://lab.fyscu.com/images/penxiangyi.jpg",
                         "photo": "https://lab.fyscu.com/images/penxiangyi.jpg"
                     }
@@ -80,205 +90,239 @@
                 "staffs": [
                     {
                         "name": "付文君",
-                        "saying": "呼呼哈哈哈，我才是历届最菜的部长<br>「<code>C·Java·html·css</code>」",
+                        "saying": "呼呼哈哈哈，我才是历届最菜的部长",
+                        "language": "C·Java·html·css",
                         "avatar": "https://lab.fyscu.com/images/fwj.jpg",
                         "photo": "https://lab.fyscu.com/images/fwj.jpg"
                     },
                     {
                         "name": "陈凯奇",
-                        "saying": "来个新人带我的咸鱼副部<br>「<code>C·C++·Python·JAVA</code>」",
+                        "saying": "来个新人带我的咸鱼副部",
+                        "language": "C·C++·Python·JAVA",
                         "avatar": "https://lab.fyscu.com/images/ckq.jpg",
                         "photo": "https://lab.fyscu.com/images/ckq.jpg"
                     },
                     {
                         "name": "赵云杰",
-                        "saying": "未来可期的躺平副部<br>「<code>C·Python</code>」",
+                        "saying": "未来可期的躺平副部",
+                        "language": "C·Python",
                         "avatar": "https://lab.fyscu.com/images/zyj.jpg",
                         "photo": "https://lab.fyscu.com/images/zyj.jpg"
                     },
                     {
                         "name": "皮卡丘（任浩龙）",
-                        "saying": "皮卡皮卡~皮卡丘~皮皮皮卡丘<br>「<code>html·php·Python·C++</code>」",
+                        "saying": "皮卡皮卡~皮卡丘~皮皮皮卡丘",
+                        "language": "html·php·Python·C++",
                         "avatar": "https://lab.fyscu.com/images/pikachu.PNG",
                         "photo": "https://lab.fyscu.com/images/pikachu.PNG"
                     },
                     {
                         "name": "李方钏",
-                        "saying": "咸鱼一条，精通各种姿势摸鱼<br>「<code>Python·C++</code>」",
+                        "saying": "咸鱼一条，精通各种姿势摸鱼",
+                        "language": "Python·C++",
                         "avatar": "https://lab.fyscu.com/images/lifangchuan.jpg",
                         "photo": "https://lab.fyscu.com/images/lifangchuan.jpg"
                     },
                     {
                         "name": "谢逸舟",
-                        "saying": "uninstall<br>「<code>html·php·js·Python·C++</code>」",
+                        "saying": "uninstall",
+                        "language": "html·php·js·Python·C++",
                         "avatar": "https://lab.fyscu.com/images/xieyizhou.jpg",
                         "photo": "https://lab.fyscu.com/images/xieyizhou.jpg"
                     },
                     {
                         "name": "蓝浩",
-                        "saying": "呵呵。<br>「<code>php·node·Angular</code>」",
+                        "saying": "呵呵。",
+                        "language": "php·node·Angular",
                         "avatar": "https://lab.fyscu.com/images/lanhao.jpg",
                         "photo": "https://lab.fyscu.com/images/lanhao.jpg"
                     },
                     {
                         "name": "石垚",
-                        "saying": "优雅编程，简单生活。俗称“水哥”！<br>「<code>JavaScript·jQuery·PHP·Lin</code>ux Deepin·MiUI」",
+                        "saying": "优雅编程，简单生活。俗称“水哥”！",
+                        "language": "JavaScript·jQuery·PHP·Linux Deepin·MiUI",
                         "avatar": "https://lab.fyscu.com/images/shuige.jpg",
                         "photo": "https://lab.fyscu.com/images/shuige.jpg"
                     },
                     {
                         "name": "杨国宝",
-                        "saying": "最帅不解释。<br>「<code>php·node·html</code>」",
+                        "saying": "最帅不解释。",
+                        "language": "php·node·html",
                         "avatar": "https://lab.fyscu.com/images/yangguobao.jpg",
                         "photo": "https://lab.fyscu.com/images/yangguobao.jpg"
                     },
                     {
                         "name": "陈宁",
-                        "saying": "自己织毛衣<br>「<code>php</code>」",
+                        "saying": "自己织毛衣",
+                        "language": "php",
                         "avatar": "https://lab.fyscu.com/images/chenning.jpg",
                         "photo": "https://lab.fyscu.com/images/chenning.jpg"
                     },
                     {
                         "name": "陈小源",
-                        "saying": "Smile your smile, Dream your dream「<code>php·c</code>」",
+                        "saying": "Smile your smile, Dream your dream",
+                        "language": "php·c",
                         "avatar": "https://lab.fyscu.com/images/chenxiaoyuan.png",
                         "photo": "https://lab.fyscu.com/images/chenxiaoyuan.png"
                     },
                     {
                         "name": "蒋航",
-                        "saying": "冷暖自知。<br>「<code>php·html·operations</code>」",
+                        "saying": "冷暖自知。",
+                        "language": "php·html·operations",
                         "avatar": "https://lab.fyscu.com/images/jianghang.jpg",
                         "photo": "https://lab.fyscu.com/images/jianghang.jpg"
                     },
                     {
                         "name": "白琦",
-                        "saying": "先帝创业未半，而花光预算。<br>「<code>php·c</code>」",
+                        "saying": "先帝创业未半，而花光预算。",
+                        "language": "php·c",
                         "avatar": "https://lab.fyscu.com/images/baiqi.jpg",
                         "photo": "https://lab.fyscu.com/images/baiqi.jpg"
                     },
                     {
                         "name": "陶钰",
-                        "saying": "I am writimg for my only sunshine「<code>html</code>」",
+                        "saying": "I am writimg for my only sunshine",
+                        "language": "html",
                         "avatar": "https://lab.fyscu.com/images/taoyu.jpg",
                         "photo": "https://lab.fyscu.com/images/taoyu.jpg"
                     },
                     {
                         "name": "崔倩",
-                        "saying": "注孤生 我只看不说话<br>「<code>html·css·js</code>」",
+                        "saying": "注孤生 我只看不说话",
+                        "language": "html·css·js",
                         "avatar": "https://lab.fyscu.com/images/cuiqian.jpg",
                         "photo": "https://lab.fyscu.com/images/cuiqian.jpg"
                     },
                     {
                         "name": "胡文佳",
-                        "saying": "请叫我手机杀手<br>「<code>html·js·css·ps</code>」",
+                        "saying": "请叫我手机杀手",
+                        "language": "html·js·css·ps",
                         "avatar": "https://lab.fyscu.com/images/huwenjia.jpg",
                         "photo": "https://lab.fyscu.com/images/huwenjia.jpg"
                     },
                     {
                         "name": "蒋言斌",
-                        "saying": "I see no ending<br>「<code>c++·py</code>」",
+                        "saying": "I see no ending",
+                        "language": "c++·py",
                         "avatar": "https://lab.fyscu.com/images/jiangyanbin.jpg",
                         "photo": "https://lab.fyscu.com/images/jiangyanbin.jpg"
                     },
                     {
                         "name": "吴磊城",
-                        "saying": "单身狗<br>「<code>c·c++·c#</code>」",
+                        "saying": "单身狗",
+                        "language": "c·c++·c#",
                         "avatar": "https://lab.fyscu.com/images/wuleicheng.jpg",
                         "photo": "https://lab.fyscu.com/images/wuleicheng.jpg"
                     },
                     {
                         "name": "邹兵",
-                        "saying": "艺术一草<br>「<code>java</code>」",
+                        "saying": "艺术一草",
+                        "language": "java",
                         "avatar": "https://lab.fyscu.com/images/zoubing.jpg",
                         "photo": "https://lab.fyscu.com/images/zoubing.jpg"
                     },
                     {
                         "name": "苏苏",
-                        "saying": "喵<br>「<code>c·html</code>」",
+                        "saying": "喵",
+                        "language": "c·html",
                         "avatar": "https://lab.fyscu.com/images/susu.jpg",
                         "photo": "https://lab.fyscu.com/images/susu.jpg"
                     },
                     {
                         "name": "赖林",
-                        "saying": "持续加班中<br>「<code>ruby·php·go·js</code>」",
+                        "saying": "持续加班中",
+                        "language": "ruby·php·go·js",
                         "avatar": "https://lab.fyscu.com/images/lailin.jpg",
                         "photo": "https://lab.fyscu.com/images/lailin.jpg"
                     },
                     {
                         "name": "许曼",
-                        "saying": "生无可恋，不想说话<br>「<code>python·php</code>」",
+                        "saying": "生无可恋，不想说话",
+                        "language": "python·php",
                         "avatar": "https://lab.fyscu.com/images/xuman.jpg",
                         "photo": "https://lab.fyscu.com/images/xuman.jpg"
                     },
                     {
                         "name": "巩娜",
-                        "saying": "睡到自然醒<br>「<code>html」<br></code> ",
+                        "saying": "睡到自然醒 ",
+                        "language": "html",
                         "avatar": "https://lab.fyscu.com/images/banner.jpg",
                         "photo": "https://lab.fyscu.com/images/banner.jpg"
                     },
                     {
                         "name": "周翔鸿",
-                        "saying": "喜欢折腾<br>「<code>python</code>」",
+                        "saying": "喜欢折腾",
+                        "language": "python",
                         "avatar": "https://lab.fyscu.com/images/zhouxianghong.jpg",
                         "photo": "https://lab.fyscu.com/images/zhouxianghong.jpg"
                     },
                     {
                         "name": "李举磊",
-                        "saying": "0 error 0 warning<br>「<code>html·php</code>」",
+                        "saying": "0 error 0 warning",
+                        "language": "html·php",
                         "avatar": "https://lab.fyscu.com/images/lijulei.jpg",
                         "photo": "https://lab.fyscu.com/images/lijulei.jpg"
                     },
                     {
                         "name": "xiaoPC",
-                        "saying": "~~~<br>「<code>html·php·js·Python·C++</code>」",
+                        "saying": "~~~",
+                        "language": "html·php·js·Python·C++",
                         "avatar": "https://lab.fyscu.com/images/xpc.jpg",
                         "photo": "https://lab.fyscu.com/images/xpc.jpg"
                     },
                     {
                         "name": "柯林平",
-                        "saying": "~~~<br>「<code>html·php·js·Python·C++</code>」",
+                        "saying": "~~~",
+                        "language": "html·php·js·Python·C++",
                         "avatar": "https://lab.fyscu.com/images/klp.jpg",
                         "photo": "https://lab.fyscu.com/images/klp.jpg"
                     },
                     {
                         "name": "李大凡",
-                        "saying": "~~~<br>「<code>html·php·js·Python·C++</code>」",
+                        "saying": "~~~",
+                        "language": "html·php·js·Python·C++",
                         "avatar": "https://lab.fyscu.com/images/df.jpg",
                         "photo": "https://lab.fyscu.com/images/df.jpg"
                     },
                     {
                         "name": "伍胤玮",
-                        "saying": "可能是你见过最菜的技术部门部长<br>「<code>html·javascript·Css</code>」",
+                        "saying": "可能是你见过最菜的技术部门部长",
+                        "language": "html·javascript·Css",
                         "avatar": "https://lab.fyscu.com/images/wyw.jpg",
                         "photo": "https://lab.fyscu.com/images/wyw.jpg"
                     },
                     {
                         "name": "张奥洁",
-                        "saying": "奥妙～奥利奥～妙妙奥利奥利奥<br>「<code>C·python·项目学习</code>」",
+                        "saying": "奥妙～奥利奥～妙妙奥利奥利奥",
+                        "language": "C·python·项目学习",
                         "avatar": "https://lab.fyscu.com/images/zaj.jpg",
                         "photo": "https://lab.fyscu.com/images/zaj.jpg"
                     },
                     {
                         "name": "唐琦",
-                        "saying": "& nbsp;& nbsp;& nbsp;<br>「<code>javascript·Python</code>」",
+                        "saying": "& nbsp;& nbsp;& nbsp;",
+                        "language": "javascript·Python",
                         "avatar": "https://lab.fyscu.com/images/tq.jpg",
                         "photo": "https://lab.fyscu.com/images/tq.jpg"
                     },
                     {
                         "name": "刘心语",
-                        "saying": "Born free and love without fear<br>「<code>C/C艹.html·python</code>」",
+                        "saying": "Born free and love without fear",
+                        "language": "C/C艹.html·python",
                         "avatar": "https://lab.fyscu.com/images/lxy.jpg",
                         "photo": "https://lab.fyscu.com/images/lxy.jpg"
                     },
                     {
                         "name": "邱雯佳",
-                        "saying": "菜鸡副部<br>「<code>C·python·JAVA</code>」",
+                        "saying": "菜鸡副部",
+                        "language": "C·python·JAVA",
                         "avatar": "https://lab.fyscu.com/images/qwj.jpg",
                         "photo": "https://lab.fyscu.com/images/qwj.jpg"
                     },
                     {
                         "name": "程睿",
-                        "saying": "想搞机器人的划水副部<br>「<code>C·html·css·javascript</code>」",
+                        "saying": "想搞机器人的划水副部",
+                        "language": "C·html·css·javascript",
                         "avatar": "https://lab.fyscu.com/images/cr.jpg",
                         "photo": "https://lab.fyscu.com/images/cr.jpg"
                     }

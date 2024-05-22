@@ -441,14 +441,14 @@ code.hljs {
 /* Base color: saturation 0; */
 .hljs-subst {
   /* default */
-  
+
 }
 /* purposely ignored */
 .hljs-formula,
 .hljs-attr,
 .hljs-property,
 .hljs-params {
-  
+
 }
 .hljs-comment {
   color: #697070
@@ -635,7 +635,7 @@ code.hljs {
 .hljs-punctuation,
 .hljs-tag {
   /* purposely ignored */
-  
+
 }
 }
 .highlight:hover .copy-btn,

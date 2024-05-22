@@ -49,6 +49,9 @@
 
     <!-- loading effect -->
     <div class="spinner-container">
+        <div class="spinner-logo">
+            <img src="./assets/logo.png" />
+        </div>
         <div class="spinner">
             <div class="double-bounce1"></div>
             <div class="double-bounce2"></div>
@@ -102,7 +105,7 @@
                         </li>
                         <li class="menu-item menu-item-docs">
                             <a href="https://fix.fyscu.com" rel="section">
-                                <i class="fa fa-hammer fa-fw"></i>
+                                <i class="fa fa-wrench fa-fw"></i>
                                 维修服务
                             </a>
                         </li>
@@ -114,7 +117,7 @@
                         </li>
                         <li class="menu-item menu-item-archives">
                             <a href="https://tmp.fyscu.com" rel="section">
-                                <i class="fa fa-bell fa-fw"></i>
+                                <i class="fa fa-hammer fa-fw"></i>
                                 飞扬维修
                             </a>
                         </li>
@@ -255,6 +258,60 @@
             NexT.boot.motion();
         }
 
+        function showPopup(staff) {
+            console.log(staff);
+            let contact = staff.contact;
+            let photo = staff.photo || avatar;
+            let popupInfo = $('.popup-info').empty();
+            function buildInfo(_tag, _class, _text, _icon = undefined) {
+                if (_text !== undefined) {
+                    let _tagElement = $(`<${_tag}>`)
+                        .addClass(`staff-${_class} hidden`)
+                        .text(_text)
+                    if (_icon !== undefined) {
+                        _tagElement.prepend(
+                            $(`<i class="${_icon}"></i>`)
+                        )
+                    }
+                    popupInfo.append(_tagElement);
+                }
+            }
+            buildInfo('h1', 'name', staff.name);
+            buildInfo('p', 'saying', staff.saying);
+            buildInfo('div', 'position', staff.position, 'fa-solid fa-user-tie');
+            buildInfo('div', 'language', staff.language, 'fa-solid fa-code');
+            if (contact !== undefined) {
+                buildInfo('div', 'contact-title', '联系我：', 'fa-solid fa-paper-plane');
+                let contactItems = $('<div>')
+                    .addClass('staff-contact-items hidden')
+                for (let key in contact) {
+                    contactItems.append($('<span>')
+                        .addClass('circle')
+                        .append(`<i class="${key}"></i>`)
+                        .attr({
+                            // 新窗口打开链接
+                            'onclick': `window.open('${contact[key]}', '_blank');`,
+                        })
+                    );
+                }
+                popupInfo.append(contactItems);
+            }
+            // animate popupInfo
+            popupInfo.children().each(function (index, element) {
+                setTimeout(() => {
+                    $(element).removeClass('hidden').addClass('animated fadeInLeft');
+                }, 200 * index);
+            });
+            // popup 居中
+            windowCenter();
+            $('.popup-image').empty().append(
+                $('<img>').attr('src', photo)
+            ); // 设置 photo
+            // 显示 popup 和 popup的模糊背景
+            $('.popup-bg').fadeIn().addClass('animated fadeIn');
+            $('.popup').fadeIn().addClass('animated fadeInLeft');
+        }
+
         function buildDOM(params) {
             let appContainer = ("#app_container");
             $.ajax({
@@ -298,43 +355,18 @@
                                 .addClass('post-title')
                                 .append(postTitleLink);
                             staffs.forEach(staff => {
-                                let name = staff.name;
-                                let saying = staff.saying;
-                                let avatar = staff.avatar;
-                                let photo = staff.photo;
+                                let avatar = staff.avatar || './assets/defaultAvatar.png';
                                 let avatarImg = $('<img>')
                                     .addClass('thumbnail lazy')
                                     .attr('data-src', avatar);
-                                let overlay = $('<div>').addClass('overlay').text(name);
+                                let overlay = $('<div>')
+                                    .addClass('overlay')
+                                    .text(staff.name);
                                 let avatarDiv = $('<div>')
                                     .addClass('avatar')
                                     .append(avatarImg)
                                     .append(overlay)
-                                    .click(function () {
-                                        let popup = $('.popup');
-                                        let popupbg = $('.popup-bg');
-                                        let popupInfo = $('.popup-info');
-                                        let popupImage = $('.popup-image');
-                                        popupInfo.empty()
-                                            .append($('<h1>')
-                                                .addClass('staff-name animated fadeInDown')
-                                                .text(name)
-                                            ).append($('<p>')
-                                                .addClass('staff-saying animated fadeInDown')
-                                                .html(saying)
-                                            ).append($('<p>')
-                                                .addClass('staff-position animated fadeInDown')
-                                                .text("职位：" + positionName)
-                                            );
-                                        popupImage.empty()
-                                            .append($('<img>')
-                                                .attr('src', photo)
-                                            );
-                                        // popup 居中
-                                        windowCenter();
-                                        popupbg.fadeIn().addClass('animated fadeIn');
-                                        popup.fadeIn().addClass('animated fadeInLeft');
-                                    });
+                                    .click(function () { showPopup(staff); });
                                 avatarsContainerDiv.append(avatarDiv);
                             });
                             let postHeader = $('<header>')

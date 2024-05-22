@@ -102,6 +102,40 @@
     overflow: auto;
 }
 
+.popup-info .hidden {
+    visibility: hidden;
+}
+
+.popup-info .staff-position i {
+    margin-right: 1rem;
+}
+
+.popup-info .staff-language i {
+    margin-right: 1rem;
+}
+
+.popup-info .staff-contact-title i{
+    margin-right: 1rem;
+}
+
+.popup-info .staff-contact-items .circle {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    /* 添加过渡效果 */
+    margin-right: 0.5rem;
+}
+
+.popup-info .circle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* 悬停时的背景颜色 */
+}
+
 .popup-clear {
     clear: both;
 }
@@ -125,6 +159,15 @@
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     justify-content: center;
     align-items: center;
+}
+
+.spinner-logo {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 5rem);
+    top: calc(50% - 10rem);
+    max-width: 10rem;
+
 }
 
 .spinner-container.hidden {
@@ -160,6 +203,7 @@
 }
 
 @-webkit-keyframes sk-bounce {
+
     0%,
     100% {
         -webkit-transform: scale(0.0)
